@@ -1,77 +1,43 @@
-// =========================
-// LENIS SMOOTH SCROLL
-// =========================
+document.addEventListener("DOMContentLoaded", function () {
 
-const lenis = new Lenis({
-  smooth: true
-})
+  console.log("JS Connected ✅");
 
-function raf(time) {
+  // ================= HERO ANIMATION =================
 
-  lenis.raf(time)
+  if (typeof gsap !== "undefined") {
+    gsap.from(".hero-content > *", {
+      y: 40,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out"
+    });
+  }
 
-  requestAnimationFrame(raf)
+  // ================= HERO SLIDESHOW =================
 
-}
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
 
-requestAnimationFrame(raf)
+  function showNextSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
 
+  if (slides.length > 1) {
+    setInterval(showNextSlide, 5000);
+  }
 
-// =========================
-// HERO ANIMATION
-// =========================
+  // ================= MOBILE MENU =================
 
-gsap.from(".hero-subtitle",{
-  y:30,
-  opacity:0,
-  duration:1,
-  delay:0.3
-})
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-gsap.from(".hero h1",{
-  y:50,
-  opacity:0,
-  duration:1.2,
-  delay:0.5
-})
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 
-gsap.from(".hero-button",{
-  y:20,
-  opacity:0,
-  duration:1,
-  delay:0.8
-})
-
-// =========================
-// HERO SLIDESHOW
-// =========================
-
-const slides = document.querySelectorAll(".slide")
-
-let currentSlide = 0
-
-function showNextSlide(){
-
-  slides[currentSlide].classList.remove("active")
-
-  currentSlide = (currentSlide + 1) % slides.length
-
-  slides[currentSlide].classList.add("active")
-
-}
-
-setInterval(showNextSlide, 5000)
-
-// =========================
-// MOBILE MENU
-// =========================
-
-const menuToggle = document.querySelector(".menu-toggle")
-
-const navLinks = document.querySelector(".nav-links")
-
-menuToggle.addEventListener("click", () => {
-
-  navLinks.classList.toggle("active")
-
-})
+});
