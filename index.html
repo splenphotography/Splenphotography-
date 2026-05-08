@@ -21,179 +21,122 @@
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
+  <!-- ================= NAVBAR ================= -->
 
   <header class="header">
 
-    <div class="logo">
-      SplenPhotography
-    </div>
+    <div class="logo">SplenPhotography</div>
 
-    <nav class="navbar">
-
+    <nav>
       <ul class="nav-links">
-
         <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#featured">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#">Contact</a></li>
-
       </ul>
-
     </nav>
 
-    <div class="menu-toggle">
-      ☰
-    </div>
+    <div class="menu-toggle">☰</div>
 
   </header>
 
-  <!-- =========================
-     HERO SECTION
-========================== -->
+  <!-- ================= HERO ================= -->
 
-<section class="hero">
+  <section class="hero">
 
-  <!-- SLIDES -->
+    <div class="slide active">
+      <img src="assets/images/hero/hero-1.jpg" alt="Wedding moment">
+    </div>
 
-  <div class="slide active">
-    <img src="assets/images/hero/hero-1.jpg" alt="">
-  </div>
+    <div class="slide">
+      <img src="assets/images/hero/hero-2.jpg" alt="Luxury portrait">
+    </div>
 
-  <div class="slide">
-    <img src="assets/images/hero/hero-2.jpg" alt="">
-  </div>
+    <div class="slide">
+      <img src="assets/images/hero/hero-3.jpg" alt="Elegant wedding">
+    </div>
 
-  <div class="slide">
-    <img src="assets/images/hero/hero-3.jpg" alt="">
-  </div>
+    <div class="slide">
+      <img src="assets/images/hero/hero-4.jpg" alt="Couple session">
+    </div>
 
-  <div class="slide">
-    <img src="assets/images/hero/hero-4.jpg" alt="">
-  </div>
+    <div class="slide">
+      <img src="assets/images/hero/hero-5.jpg" alt="Bridal photography">
+    </div>
 
-  <div class="slide">
-    <img src="assets/images/hero/hero-5.jpg" alt="">
-  </div>
+    <div class="overlay"></div>
 
-  <!-- DARK OVERLAY -->
+    <div class="hero-content">
+      <p class="hero-subtitle">Luxury Wedding & Portrait Photography</p>
+      <h1>Capturing Timeless Moments</h1>
+      <a href="#featured" class="hero-button">View Portfolio</a>
+    </div>
 
-  <div class="overlay"></div>
+  </section>
 
-  <!-- HERO CONTENT -->
+  <!-- ================= FEATURED ================= -->
 
-  <div class="hero-content">
-
-    <p class="hero-subtitle">
-      Luxury Wedding & Portrait Photography
-    </p>
-
-    <h1>
-      Capturing Timeless Moments
-    </h1>
-
-    <a href="#" class="hero-button">
-      View Portfolio
-    </a>
-
-  </div>
-
-</section>
-  <!-- =========================
-       FEATURED SECTION
-  ========================== -->
-
-  <section class="featured">
+  <section class="featured" id="featured">
 
     <div class="section-title">
-
       <p>Featured Work</p>
-
-      <h2>
-        Elegant Storytelling Through Photography
-      </h2>
-
+      <h2>Elegant Storytelling Through Photography</h2>
     </div>
 
     <div class="gallery-grid">
 
+      <!-- Use hero images temporarily if other folders not created -->
       <div class="gallery-item">
-        <img src="assets/images/weddings/wedding-1.jpg" alt="">
+        <img src="assets/images/hero/hero-1.jpg" alt="">
       </div>
 
       <div class="gallery-item">
-        <img src="assets/images/portraits/portrait-1.jpg" alt="">
+        <img src="assets/images/hero/hero-2.jpg" alt="">
       </div>
 
       <div class="gallery-item">
-        <img src="assets/images/weddings/wedding-2.jpg" alt="">
+        <img src="assets/images/hero/hero-3.jpg" alt="">
       </div>
 
       <div class="gallery-item">
-        <img src="assets/images/branding/branding-1.jpg" alt="">
+        <img src="assets/images/hero/hero-4.jpg" alt="">
       </div>
 
     </div>
 
   </section>
 
-  <!-- =========================
-       ABOUT PREVIEW
-  ========================== -->
+  <!-- ================= ABOUT ================= -->
 
-  <section class="about-preview">
+  <section class="about-preview" id="about">
 
     <div class="about-image">
-
-      <img src="assets/images/hero/about-image.jpg" alt="">
-
+      <img src="assets/images/hero/hero-5.jpg" alt="">
     </div>
 
     <div class="about-content">
-
-      <p class="mini-title">
-        About SplenPhotography
-      </p>
-
-      <h2>
-        Creating Cinematic Memories That Last Forever
-      </h2>
-
+      <p class="mini-title">About SplenPhotography</p>
+      <h2>Creating Cinematic Memories That Last Forever</h2>
       <p>
         We specialize in documenting authentic emotions,
         timeless weddings, luxury portraits and unforgettable stories.
       </p>
-
-      <a href="#" class="secondary-button">
-        Learn More
-      </a>
-
+      <a href="#" class="secondary-button">Learn More</a>
     </div>
 
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- ================= FOOTER ================= -->
 
   <footer class="footer">
-
-    <p>
-      © 2026 SplenPhotography. All Rights Reserved.
-    </p>
-
+    <p>© 2026 SplenPhotography. All Rights Reserved.</p>
   </footer>
-
-  <!-- Lenis Smooth Scroll -->
-  <script src="https://unpkg.com/lenis@1.0.5/dist/lenis.min.js"></script>
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
   <!-- JS -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 
 </body>
 </html>
